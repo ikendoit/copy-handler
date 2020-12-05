@@ -15,7 +15,7 @@
   bash setup.sh
 ```
 
-### then:
+### Main Usage:
 ```
   echo "doing your thing..."
   ...
@@ -24,6 +24,12 @@
   ...
   echo "back to doing your thing..."
 ```
+
+#### Mode:
+  - `grep "<text-pattern>"`: Ccan the copied text, notify if text contains pattern
+  - `definition`: Google Search this text 
+  - `translate`: Google Translate this text 
+  - `youtube`: Google Youtube Search this text
 
 ## :building_construction: Plugins system
 

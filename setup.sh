@@ -3,7 +3,7 @@
 echo "please have python3"
 echo "please have pip"
 echo "please have fswatch using: https://github.com/emcrisostomo/fswatch#getting-fswatch"
-echo "please read error message and see what you are missing"
+echo "please read error message and see what you are missing, install those too :)"
 
 # Excuse my lack of containers
 mkdir ~/.ctrl_c_handler 2> /dev/null
