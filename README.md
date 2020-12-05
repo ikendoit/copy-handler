@@ -1,8 +1,11 @@
 # :fist_raised: Copy Handler 
 
 :fairy: Hello 
+
 :fairy: I am Fairie
+
 :fairy: Nice to meet you
+
 :fairy: Bye
 
 
@@ -12,21 +15,21 @@
 
 ### One time set up: 
 ```
-  bash setup.sh
+  bash setup.sh && source ~/.bash_profile
 ```
 
 ### Main Usage:
 ```
   echo "doing your thing..."
   ...
-  copy-handler.sh <mode> <config>
+  copy-handler.sh <mode> <optional-argument>
   # Terminate by pressing ctrl-c, so the worker's final task is to die.
   ...
   echo "back to doing your thing..."
 ```
 
 #### Mode:
-  - `grep "<text-pattern>"`: Ccan the copied text, notify if text contains pattern
+  - `grep "<text-pattern>"`: Scan the copied text, notify if text contains pattern
   - `definition`: Google Search this text 
   - `translate`: Google Translate this text 
   - `youtube`: Google Youtube Search this text
@@ -37,5 +40,5 @@
   cd ./plugins
   # view sample files, create one yourself
   # remember the naming prefix "plugin_", without it, the plugin would not run.
-```
+``
 

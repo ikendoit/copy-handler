@@ -12,7 +12,7 @@ echo "`date +%s`" > ~/.ctrl_c_handler/last_run_time
 #3. Run fswatch to watch file copy-handler-c-output.txt
 #4. On every file change, run those modules with $2 param as argument
 
-python3 clipboard-listener.py &
+python3 $COPY_HANDLER_HOME_DIRECTORY/clipboard-listener.py &
 
 function runPlugins()
 {
@@ -22,7 +22,7 @@ function runPlugins()
   # validate if last invocation was less than 2 seconds ago, if yes, don't run, could be the fswatch bug ( fswatch shoots multiple records per file-event )
   if [ "$(expr $run_stamp - $last_run_stamp)" -ge 2 ]; then
 
-    for plugin_file in `ls -d $PWD/plugins/* | grep "plugin_" | grep "$CTRL_C_HANDLER_PLUGIN_PATTERN"`; do
+    for plugin_file in `ls -d $COPY_HANDLER_HOME_DIRECTORY/plugins/* | grep "plugin_" | grep "$CTRL_C_HANDLER_PLUGIN_PATTERN"`; do
 
       $plugin_file $CTRL_C_HANDLER_ARGUMENT
 
